@@ -11,9 +11,9 @@ function handleErrors(error){
     }
     if(error){
         console.log(error)
-        // Object.values(error).forEach(({properties})=>{
-        //     err[properties.path]=properties.message
-        // })
+        Object.values(error).forEach(({properties})=>{
+            err[properties.path]=properties.message
+        })
     }
 
     return err
